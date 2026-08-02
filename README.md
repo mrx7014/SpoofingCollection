@@ -1,5 +1,5 @@
 # SpoofingCollection
-<img src"assets/banner.jpg">
+<img src="assets/banner.jpg">
 
 A collection of Magisk root modules and LSPosed (Xposed) modules for spoofing Android device fingerprints (manufacturer, model, build props, etc.) to appear as different devices.
 
