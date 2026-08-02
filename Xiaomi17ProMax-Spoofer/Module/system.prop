@@ -1,0 +1,16 @@
+# Don't Use Without Permissions ©
+ro.product.brand=xiaomi
+ro.product.device=missi
+ro.product.manufacturer=Xiaomi
+ro.product.model=Xiaomi 17 Pro Max
+ro.product.name=missi
+ro.product.product.brand=xiaomi
+ro.product.product.device=missi
+ro.product.product.manufacturer=Xiaomi
+ro.product.product.model=Xiaomi 17 Pro Max
+ro.product.product.name=missi
+ro.product.brand_for_attestation=xiaomi
+ro.product.device_for_attestation=missi
+ro.product.manufacturer_for_attestation=Xiaomi
+ro.product.model_for_attestation=Xiaomi 17 Pro Max
+ro.product.name_for_attestation=missi

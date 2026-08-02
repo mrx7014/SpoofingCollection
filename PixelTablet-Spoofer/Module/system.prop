@@ -1,0 +1,16 @@
+# Don't Use Without Permissions ©
+ro.product.system.brand=google
+ro.product.system.manufacturer=Google
+ro.product.product.manufacturer=Google
+ro.system.manufacturer=Google
+ro.product.model=tangopro
+ro.product.name=Google Pixel Tablet
+ro.product.product.device=tangopro
+ro.product.product.model=tangopro
+ro.product.brand=google
+ro.product.product.name=Google Pixel Tablet
+ro.product.brand_for_attestation=Google
+ro.product.device_for_attestation=tangopro
+ro.product.manufacturer_for_attestation=Google
+ro.product.model_for_attestation=tangopro
+ro.product.name_for_attestation=Google Pixel Tablet

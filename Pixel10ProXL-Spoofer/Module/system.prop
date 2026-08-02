@@ -1,0 +1,17 @@
+# Don't Use Without Permissions ©
+ro.product.device=mustang
+ro.product.system.brand=google
+ro.product.system.manufacturer=Google
+ro.product.product.manufacturer=Google
+ro.system.manufacturer=Google
+ro.product.model=mustang
+ro.product.name=Pixel 10 Pro XL
+ro.product.product.device=mustang
+ro.product.product.model=mustang
+ro.product.brand=google
+ro.product.product.name=Pixel 10 Pro XL
+ro.product.brand_for_attestation=Google
+ro.product.device_for_attestation=mustang
+ro.product.manufacturer_for_attestation=Google
+ro.product.model_for_attestation=mustang
+ro.product.name_for_attestation=Pixel 10 Pro XL

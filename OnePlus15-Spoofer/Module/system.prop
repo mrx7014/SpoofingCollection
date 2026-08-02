@@ -1,0 +1,17 @@
+# Don't Use Without Permissions ©
+ro.product.device=OnePlus 15
+ro.product.system.brand=OnePlus
+ro.product.system.manufacturer=OnePlus
+ro.product.product.manufacturer=OnePlus
+ro.system.manufacturer=OnePlus
+ro.product.model=OP611FL1
+ro.product.name=OnePlus 15
+ro.product.product.device=OnePlus 15
+ro.product.product.model=OP611FL1
+ro.product.brand=OnePlus
+ro.product.product.name=OP611FL1
+ro.product.brand_for_attestation=oneplus
+ro.product.device_for_attestation=OP611FL1
+ro.product.manufacturer_for_attestation=OnePlus
+ro.product.model_for_attestation=OnePlus 15
+ro.product.name_for_attestation=OP611FL1

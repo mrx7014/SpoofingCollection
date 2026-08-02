@@ -1,0 +1,71 @@
+name: Build LSPosed Apps
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ${{ matrix.device_dir }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        device_dir:
+          - S26Ultra-Spoofer
+          - OnePlus15-Spoofer
+          - TabS10Ultra-Spoofer
+          - Pixel10ProXL-Spoofer
+          - PixelTablet-Spoofer
+          - Xiaomi17ProMax-Spoofer
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x "${{ matrix.device_dir }}/LSPosed/gradlew"
+
+      # Version from module.prop's version= if present, else run number
+      - name: Resolve version
+        id: version
+        run: |
+          PROP_FILE="${{ matrix.device_dir }}/Module/module.prop"
+          if [ -f "$PROP_FILE" ] && grep -q '^version=' "$PROP_FILE"; then
+            VERSION=$(grep '^version=' "$PROP_FILE" | cut -d'=' -f2 | tr -d '[:space:]')
+          else
+            VERSION="v0.0.${{ github.run_number }}"
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Build LSPosed APK
+        working-directory: ${{ matrix.device_dir }}/LSPosed
+        run: ./gradlew assembleRelease --stacktrace
+
+      - name: Locate built APK
+        id: apk
+        run: |
+          APK_PATH=$(find "${{ matrix.device_dir }}/LSPosed/app/build/outputs/apk" -name "*.apk" | head -n 1)
+          if [ -z "$APK_PATH" ]; then
+            echo "No APK found" >&2
+            exit 1
+          fi
+          echo "path=$APK_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Rename APK
+        run: cp "${{ steps.apk.outputs.path }}" "${{ matrix.device_dir }}-${{ steps.version.outputs.version }}.apk"
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.device_dir }}-${{ steps.version.outputs.version }}
+          path: ${{ matrix.device_dir }}-${{ steps.version.outputs.version }}.apk
+          if-no-files-found: error
