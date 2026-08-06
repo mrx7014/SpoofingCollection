@@ -17,6 +17,7 @@ Each sub-project targets a specific device profile and ships two components:
 | `Pixel10ProXL-Spoofer` | Google Pixel 10 Pro XL | `com.mrx7014.p10xlspoofer` |
 | `PixelTablet-Spoofer` | Google Pixel Tablet | `com.mrx7014.gpxtabletspoofer` |
 | `Xiaomi17ProMax-Spoofer` | Xiaomi 17 Pro Max | `com.mrx7014.x17pmspoofer` |
+| `Nothing4aPro-Spoofer` | Nothing 4a Pro | `Coming Soon (LSPosed)` |
 
 ## Repository Structure
 
